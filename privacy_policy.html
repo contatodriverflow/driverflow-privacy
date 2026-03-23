@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — DriverFlow</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+  :root {
+    --orange:      #FF6B00;
+    --orange-dim:  #FF8F00;
+    --bg:          #0D0D0D;
+    --surface:     #161616;
+    --surface2:    #1E1E1E;
+    --border:      #2A2A2A;
+    --text:        #F0F0F0;
+    --muted:       #888888;
+    --green:       #4CAF50;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 24px 64px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255,107,0,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .logo-icon {
+    width: 48px; height: 48px;
+    border-radius: 14px;
+    background: var(--orange);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: -0.5px;
+  }
+
+  .logo-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+
+  header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  header h1 span { color: var(--orange); }
+
+  .header-meta {
+    font-size: 14px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .header-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--orange);
+    display: inline-block;
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  /* ── SUMÁRIO ── */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--orange);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 56px;
+  }
+
+  .toc-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 16px;
+  }
+
+  .toc ol {
+    list-style: none;
+    counter-reset: toc;
+    display: grid;
+    gap: 8px;
+  }
+
+  .toc li {
+    counter-increment: toc;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .toc li::before {
+    content: counter(toc, decimal-leading-zero);
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--orange);
+    opacity: 0.7;
+    min-width: 24px;
+  }
+
+  .toc a {
+    color: var(--text);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s, color 0.2s;
+  }
+
+  .toc a:hover { opacity: 1; color: var(--orange); }
+
+  /* ── SEÇÕES ── */
+  section {
+    margin-bottom: 52px;
+    scroll-margin-top: 24px;
+  }
+
+  .section-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text);
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  p {
+    color: rgba(240,240,240,0.8);
+    margin-bottom: 16px;
+    font-size: 15.5px;
+  }
+
+  /* ── CARDS DE DADOS ── */
+  .data-grid {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0;
+  }
+
+  .data-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .data-card-icon {
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .data-card-content { flex: 1; }
+
+  .data-card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .data-card-desc {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 6px;
+    font-family: 'Syne', sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-local {
+    background: rgba(76,175,80,0.15);
+    color: var(--green);
+    border: 1px solid rgba(76,175,80,0.3);
+  }
+
+  .tag-firebase {
+    background: rgba(255,107,0,0.12);
+    color: var(--orange);
+    border: 1px solid rgba(255,107,0,0.25);
+  }
+
+  /* ── DESTAQUE ── */
+  .highlight-box {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  .highlight-box p {
+    margin: 0;
+    font-size: 14.5px;
+    color: rgba(240,240,240,0.75);
+  }
+
+  .highlight-box strong { color: var(--green); }
+
+  .warning-box {
+    background: rgba(255,107,0,0.06);
+    border: 1px solid rgba(255,107,0,0.2);
+    border-left: 3px solid var(--orange);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  .warning-box p {
+    margin: 0;
+    font-size: 14.5px;
+    color: rgba(240,240,240,0.75);
+  }
+
+  /* ── LISTA ── */
+  ul.clean {
+    list-style: none;
+    margin: 16px 0 20px;
+    display: grid;
+    gap: 10px;
+  }
+
+  ul.clean li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    color: rgba(240,240,240,0.8);
+  }
+
+  ul.clean li::before {
+    content: '—';
+    color: var(--orange);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── CONTATO ── */
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  .contact-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .contact-email {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: opacity 0.2s;
+  }
+
+  .contact-email:hover { opacity: 0.85; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  footer strong { color: var(--orange); }
+
+  /* ── RESPONSIVO ── */
+  @media (max-width: 600px) {
+    .container { padding: 40px 20px 64px; }
+    .toc { padding: 20px; }
+    .data-card { flex-direction: column; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <div class="logo-icon">DF</div>
+    <span class="logo-name">DriverFlow</span>
+  </div>
+  <h1>Política de <span>Privacidade</span></h1>
+  <div class="header-meta">
+    <span><span class="dot"></span> Vigente desde 18 de março de 2026</span>
+    <span><span class="dot"></span> Última atualização: 23 de março de 2026</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="toc">
+    <div class="toc-title">Índice</div>
+    <ol>
+      <li><a href="#s1">Sobre o DriverFlow</a></li>
+      <li><a href="#s2">Dados coletados</a></li>
+      <li><a href="#s3">Como os dados são usados</a></li>
+      <li><a href="#s4">Serviço de Acessibilidade</a></li>
+      <li><a href="#s5">Firebase e serviços de terceiros</a></li>
+      <li><a href="#s6">Armazenamento e retenção</a></li>
+      <li><a href="#s7">Seus direitos</a></li>
+      <li><a href="#s8">Segurança</a></li>
+      <li><a href="#s9">Alterações nesta política</a></li>
+      <li><a href="#s10">Contato</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <section id="s1">
+    <div class="section-number">01</div>
+    <h2>Sobre o DriverFlow</h2>
+    <p>O DriverFlow é um aplicativo para motoristas de aplicativo (Uber, 99 e similares) que calcula automaticamente o lucro real de cada corrida, considerando custos de combustível, depreciação e custos fixos do veículo.</p>
+    <p>Levamos a privacidade dos nossos usuários a sério. Esta política explica de forma clara e objetiva quais dados coletamos, por que coletamos e como você pode exercer seus direitos.</p>
+  </section>
+
+  <!-- 2 -->
+  <section id="s2">
+    <div class="section-number">02</div>
+    <h2>Dados coletados</h2>
+    <p>O DriverFlow coleta apenas os dados estritamente necessários para o funcionamento do app.</p>
+
+    <div class="data-grid">
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Dados de corridas</div>
+          <p class="data-card-desc">Valor da corrida, distância, tempo de duração e plataforma (Uber ou 99). Coletados automaticamente pela detecção de tela ou inseridos manualmente por você.</p>
+          <span class="tag tag-local">Armazenado localmente</span>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Configuração do veículo</div>
+          <p class="data-card-desc">Tipo de veículo, consumo médio, preço do combustível e custos fixos mensais (aluguel, seguro). Inseridos manualmente por você.</p>
+          <span class="tag tag-local">Armazenado localmente</span>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Gastos manuais</div>
+          <p class="data-card-desc">Despesas inseridas por você (combustível, alimentação, manutenção etc.) para compor os relatórios financeiros.</p>
+          <span class="tag tag-local">Armazenado localmente</span>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Dados de diagnóstico</div>
+          <p class="data-card-desc">Logs de erro, modelo do dispositivo, versão do Android e versão do app. Coletados automaticamente pelo Firebase Crashlytics apenas quando ocorre uma falha.</p>
+          <span class="tag tag-firebase">Enviado ao Firebase</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+        <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Identificador anônimo de dispositivo (UID)</div>
+          <p class="data-card-desc">Um identificador único gerado automaticamente pelo Firebase Authentication ao instalar o app. Não está vinculado a nenhuma identidade pessoal. Usado para funcionalidades de backup e sistema de indicação futuro.</p>
+          <span class="tag tag-firebase">Firebase Auth</span>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>Nunca coletamos:</strong> nome completo, CPF, RG, e-mail, senha, localização GPS em tempo real, histórico de navegação, contatos, fotos, dados bancários ou de cartão de crédito.</p>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section id="s3">
+    <div class="section-number">03</div>
+    <h2>Como os dados são usados</h2>
+
+    <div class="data-grid">
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Cálculo de lucro em tempo real</div>
+          <p class="data-card-desc">Os dados de corridas e configuração do veículo são usados exclusivamente para calcular e exibir o lucro real de cada corrida no overlay e nos relatórios.</p>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Geração de relatórios</div>
+          <p class="data-card-desc">Os dados são processados localmente no seu dispositivo para gerar relatórios semanais e mensais com insights financeiros.</p>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Correção de erros</div>
+          <p class="data-card-desc">Os dados de diagnóstico são usados exclusivamente para identificar e corrigir bugs do app. Nunca são usados para publicidade ou vendidos a terceiros.</p>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>Não compartilhamos seus dados</strong> com anunciantes, corretoras, plataformas de aplicativo (Uber, 99) ou qualquer outro terceiro além do Firebase Crashlytics para fins de diagnóstico técnico.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="s4">
+    <div class="section-number">04</div>
+    <h2>Serviço de Acessibilidade</h2>
+    <p>O DriverFlow utiliza a API de Acessibilidade do Android (<code>AccessibilityService</code>) para detectar automaticamente corridas nos apps Uber Driver e 99 Motorista enquanto você trabalha.</p>
+
+    <div class="warning-box">
+      <p>O serviço de acessibilidade lê <strong>exclusivamente o texto visível na tela</strong> dos apps Uber Driver e 99 Motorista — especificamente o valor da corrida, distância e tempo de deslocamento exibidos no card de solicitação.</p>
+    </div>
+
+    <ul class="clean">
+      <li> O serviço   <strong>  não lê  </strong>  conteúdo de outros apps, mensagens, e-mails ou qualquer outra tela.</li>
+      <li> O serviço   <strong>  não captura  </strong>  senhas, dados de login ou informações pessoais dos passageiros.</li>
+      <li> O serviço                         <strong>                      não transmite    </strong>  o conteúdo da tela para servidores externos — o processamento é feito inteiramente no seu dispositivo.</li>
+      <li>Os dados detectados ficam armazenados apenas localmente no seu dispositivo.</li>
+    </ul>
+
+    <p>Você pode desativar o serviço de acessibilidade a qualquer momento em <strong>Configurações do Android → Acessibilidade → DriverFlow</strong>.</p>
+  </section>
+
+  <!-- 5 -->
+  <section id="s5">
+    <div class="section-number">05</div>
+    <h2>Firebase e serviços de terceiros</h2>
+    <p>O DriverFlow utiliza os seguintes serviços do Google Firebase:</p>
+
+    <div class="data-grid">
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Firebase Crashlytics</div>
+          <p class="data-card-desc">Coleta relatórios de falhas automáticos quando o app apresenta erro. Inclui modelo do dispositivo, versão do Android, versão do app e stack trace do erro. Não inclui dados pessoais ou de corridas.</p>
+          <span class="tag tag-firebase">Google Firebase</span>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Firebase Analytics</div>
+          <p class="data-card-desc">Registra eventos anônimos de uso do app (ex: corrida aceita, corrida rejeitada) para entender como o app é usado e melhorá-lo. Não vincula eventos a identidades pessoais.</p>
+          <span class="tag tag-firebase">Google Firebase</span>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Firebase Authentication (anônimo)</div>
+          <p class="data-card-desc">O DriverFlow usa autenticação anônima do Firebase para gerar um identificador único por dispositivo (UID). Este UID não está vinculado a nenhuma identidade pessoal — não requer e-mail, senha ou qualquer dado pessoal. É usado exclusivamente para funcionalidades futuras de backup de dados e sistema de indicação entre usuários.</p>
+          <span class="tag tag-firebase">Google Firebase</span>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon"></div>
+        <div class="data-card-content">
+          <div class="data-card-title">Google AdMob (plano gratuito)</div>
+          <p class="data-card-desc">Usuários do plano gratuito podem ver anúncios exibidos pelo Google AdMob. O AdMob pode usar identificadores de publicidade do dispositivo (GAID) para exibir anúncios relevantes. Você pode redefinir ou limitar o uso desse identificador nas configurações do Android em <strong>Configurações → Google → Anúncios</strong>. Usuários do plano Premium não veem anúncios.</p>
+          <span class="tag tag-firebase">Google AdMob</span>
+        </div>
+      </div>
+    </div>
+
+    <p>Os serviços Firebase e AdMob são operados pela Google LLC e estão sujeitos à <a href="https://policies.google.com/privacy" style="color: var(--orange);">Política de Privacidade da Google</a>.</p>
+  </section>
+
+  <!-- 6 -->
+  <section id="s6">
+    <div class="section-number">06</div>
+    <h2>Armazenamento e retenção</h2>
+
+    <ul class="clean">
+      <li><strong>Dados locais</strong> (corridas, gastos, configuração do veículo) são armazenados exclusivamente no banco de dados local do seu dispositivo. Esses dados permanecem no dispositivo até você desinstalar o app ou limpar os dados do app nas configurações do Android.</li>
+      <li><strong>Dados de diagnóstico</strong> enviados ao Firebase são retidos conforme a política de retenção do Firebase Crashlytics (90 dias por padrão).</li>
+      <li>Não mantemos servidores próprios com cópias dos seus dados de corridas.</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>Para excluir todos os seus dados locais: acesse <strong>Configurações do Android → Apps → DriverFlow → Armazenamento → Limpar dados</strong>, ou desinstale o app.</p>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section id="s7">
+    <div class="section-number">07</div>
+    <h2>Seus direitos</h2>
+    <p>Em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018), você tem os seguintes direitos:</p>
+
+    <ul class="clean">
+      <li><strong>Acesso:</strong> consultar quais dados o app armazena sobre você.</li>
+      <li><strong>Retificação:</strong> corrigir dados incorretos diretamente nas telas de configuração do app.</li>
+      <li><strong>Exclusão:</strong> solicitar a exclusão dos seus dados a qualquer momento. Para dados locais, basta limpar os dados do app ou desinstalar. Para dados de diagnóstico no Firebase, entre em contato conosco.</li>
+      <li><strong>Portabilidade:</strong> exportar seus dados de corridas e relatórios via a função de exportação CSV disponível nos relatórios semanais e mensais.</li>
+      <li><strong>Revogação de consentimento:</strong> desativar o serviço de acessibilidade a qualquer momento nas configurações do Android.</li>
+    </ul>
+  </section>
+
+  <!-- 8 -->
+  <section id="s8">
+    <div class="section-number">08</div>
+    <h2>Segurança</h2>
+    <p>Adotamos as seguintes medidas para proteger seus dados:</p>
+
+    <ul class="clean">
+      <li>Todos os dados de corridas e configurações são armazenados em banco de dados local criptografado pelo sistema Android.</li>
+      <li>O app não realiza transmissões desnecessárias de dados para servidores externos.</li>
+      <li>O serviço de acessibilidade opera exclusivamente no contexto dos apps Uber Driver e 99 Motorista.</li>
+      <li>Não armazenamos senhas ou credenciais das plataformas de aplicativo.</li>
+    </ul>
+  </section>
+
+  <!-- 9 -->
+  <section id="s9">
+    <div class="section-number">09</div>
+    <h2>Alterações nesta política</h2>
+    <p>Podemos atualizar esta Política de Privacidade periodicamente. Quando isso ocorrer, atualizaremos a data de "última atualização" no topo desta página e, se as mudanças forem significativas, notificaremos você através de um aviso dentro do app.</p>
+    <p>Recomendamos que você revise esta política periodicamente. O uso continuado do app após as alterações constitui aceitação da política atualizada.</p>
+  </section>
+
+  <!-- 10 -->
+  <section id="s10">
+    <div class="section-number">10</div>
+    <h2>Contato</h2>
+    <p>Para exercer seus direitos, fazer perguntas ou enviar solicitações relacionadas à privacidade, entre em contato:</p>
+
+    <div class="contact-card">
+      <h3>Fale com o DriverFlow</h3>
+      <p>Respondemos em até 5 dias úteis.</p>
+      <a href="/cdn-cgi/l/email-protection#44272b2a3025302b6a20362d32213622282b33042329252d286a272b29" class="contact-email"><span class="__cf_email__" data-cfemail="34575b5a4055405b1a50465d42514652585b43745359555d581a575b59">[email&#160;protected]</span></a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 <strong>DriverFlow</strong> — Todos os direitos reservados</p>
+  <p style="margin-top: 8
