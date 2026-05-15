@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Política de Privacidade — DriverFlow</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap' );
 
   :root {
     --orange:      #FF6B00;
@@ -397,7 +397,7 @@
   <h1>Política de <span>Privacidade</span></h1>
   <div class="header-meta">
     <span><span class="dot"></span> Vigente desde 18 de março de 2026</span>
-    <span><span class="dot"></span> Última atualização: 23 de março de 2026</span>
+    <span><span class="dot"></span> Última atualização: 15 de maio de 2026</span>
   </div>
 </header>
 
@@ -435,7 +435,25 @@
 
     <div class="data-grid">
       <div class="data-card">
-        <div class="data-card-icon"></div>
+        <div class="data-card-icon">📱</div>
+        <div class="data-card-content">
+          <div class="data-card-title">Número de telefone</div>
+          <p class="data-card-desc">Coletado durante o cadastro para verificação de identidade via SMS. Usado exclusivamente para autenticação segura, prevenção de fraude no sistema de limite de corridas e vinculação do plano do usuário. Não é compartilhado com terceiros.</p>
+          <span class="tag tag-firebase">Firebase Auth</span>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon">🚗</div>
+        <div class="data-card-content">
+          <div class="data-card-title">Tipo de veículo e combustível</div>
+          <p class="data-card-desc">Informado durante o cadastro (carro ou moto, gasolina, flex ou elétrico). Usado para calcular custos precisos por corrida. Dados agregados e anonimizados sobre distribuição de tipos de veículo podem ser compartilhados com parceiros comerciais (oficinas, postos) exclusivamente em formato estatístico — sem identificação individual.</p>
+          <span class="tag tag-local">Armazenado localmente</span>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon">📊</div>
         <div class="data-card-content">
           <div class="data-card-title">Dados de corridas</div>
           <p class="data-card-desc">Valor da corrida, distância, tempo de duração e plataforma (Uber ou 99). Coletados automaticamente pela detecção de tela ou inseridos manualmente por você.</p>
@@ -444,16 +462,7 @@
       </div>
 
       <div class="data-card">
-        <div class="data-card-icon"></div>
-        <div class="data-card-content">
-          <div class="data-card-title">Configuração do veículo</div>
-          <p class="data-card-desc">Tipo de veículo, consumo médio, preço do combustível e custos fixos mensais (aluguel, seguro). Inseridos manualmente por você.</p>
-          <span class="tag tag-local">Armazenado localmente</span>
-        </div>
-      </div>
-
-      <div class="data-card">
-        <div class="data-card-icon"></div>
+        <div class="data-card-icon">🧾</div>
         <div class="data-card-content">
           <div class="data-card-title">Gastos manuais</div>
           <p class="data-card-desc">Despesas inseridas por você (combustível, alimentação, manutenção etc.) para compor os relatórios financeiros.</p>
@@ -462,7 +471,7 @@
       </div>
 
       <div class="data-card">
-        <div class="data-card-icon"></div>
+        <div class="data-card-icon">🛠️</div>
         <div class="data-card-content">
           <div class="data-card-title">Dados de diagnóstico</div>
           <p class="data-card-desc">Logs de erro, modelo do dispositivo, versão do Android e versão do app. Coletados automaticamente pelo Firebase Crashlytics apenas quando ocorre uma falha.</p>
@@ -471,19 +480,7 @@
       </div>
     </div>
 
-    <div class="highlight-box">
-        <div class="data-card">
-        <div class="data-card-icon"></div>
-        <div class="data-card-content">
-          <div class="data-card-title">Identificador anônimo de dispositivo (UID)</div>
-          <p class="data-card-desc">Um identificador único gerado automaticamente pelo Firebase Authentication ao instalar o app. Não está vinculado a nenhuma identidade pessoal. Usado para funcionalidades de backup e sistema de indicação futuro.</p>
-          <span class="tag tag-firebase">Firebase Auth</span>
-        </div>
-      </div>
-    </div>
-
     <p><strong>Nunca coletamos:</strong> nome completo, CPF, RG, e-mail, senha, localização GPS em tempo real, histórico de navegação, contatos, fotos, dados bancários ou de cartão de crédito.</p>
-    </div>
   </section>
 
   <!-- 3 -->
@@ -493,7 +490,7 @@
 
     <div class="data-grid">
       <div class="data-card">
-        <div class="data-card-icon"></div>
+        <div class="data-card-icon">💰</div>
         <div class="data-card-content">
           <div class="data-card-title">Cálculo de lucro em tempo real</div>
           <p class="data-card-desc">Os dados de corridas e configuração do veículo são usados exclusivamente para calcular e exibir o lucro real de cada corrida no overlay e nos relatórios.</p>
@@ -501,7 +498,7 @@
       </div>
 
       <div class="data-card">
-        <div class="data-card-icon"></div>
+        <div class="data-card-icon">📈</div>
         <div class="data-card-content">
           <div class="data-card-title">Geração de relatórios</div>
           <p class="data-card-desc">Os dados são processados localmente no seu dispositivo para gerar relatórios semanais e mensais com insights financeiros.</p>
@@ -509,7 +506,7 @@
       </div>
 
       <div class="data-card">
-        <div class="data-card-icon"></div>
+        <div class="data-card-icon">🔧</div>
         <div class="data-card-content">
           <div class="data-card-title">Correção de erros</div>
           <p class="data-card-desc">Os dados de diagnóstico são usados exclusivamente para identificar e corrigir bugs do app. Nunca são usados para publicidade ou vendidos a terceiros.</p>
@@ -548,7 +545,16 @@
 
     <div class="data-grid">
       <div class="data-card">
-        <div class="data-card-icon"></div>
+        <div class="data-card-icon">🔐</div>
+        <div class="data-card-content">
+          <div class="data-card-title">Firebase Authentication (telefone)</div>
+          <p class="data-card-desc">Usado para verificar a identidade do motorista via SMS no cadastro. O número de telefone é armazenado pelo Firebase e vinculado a um identificador único (UID) que conecta o usuário ao seu plano e histórico no app. Não requer senha ou e-mail.</p>
+          <span class="tag tag-firebase">Google Firebase</span>
+        </div>
+      </div>
+
+      <div class="data-card">
+        <div class="data-card-icon">⚠️</div>
         <div class="data-card-content">
           <div class="data-card-title">Firebase Crashlytics</div>
           <p class="data-card-desc">Coleta relatórios de falhas automáticos quando o app apresenta erro. Inclui modelo do dispositivo, versão do Android, versão do app e stack trace do erro. Não inclui dados pessoais ou de corridas.</p>
@@ -557,7 +563,7 @@
       </div>
 
       <div class="data-card">
-        <div class="data-card-icon"></div>
+        <div class="data-card-icon">📊</div>
         <div class="data-card-content">
           <div class="data-card-title">Firebase Analytics</div>
           <p class="data-card-desc">Registra eventos anônimos de uso do app (ex: corrida aceita, corrida rejeitada) para entender como o app é usado e melhorá-lo. Não vincula eventos a identidades pessoais.</p>
@@ -566,16 +572,7 @@
       </div>
 
       <div class="data-card">
-        <div class="data-card-icon"></div>
-        <div class="data-card-content">
-          <div class="data-card-title">Firebase Authentication (anônimo)</div>
-          <p class="data-card-desc">O DriverFlow usa autenticação anônima do Firebase para gerar um identificador único por dispositivo (UID). Este UID não está vinculado a nenhuma identidade pessoal — não requer e-mail, senha ou qualquer dado pessoal. É usado exclusivamente para funcionalidades futuras de backup de dados e sistema de indicação entre usuários.</p>
-          <span class="tag tag-firebase">Google Firebase</span>
-        </div>
-      </div>
-
-      <div class="data-card">
-        <div class="data-card-icon"></div>
+        <div class="data-card-icon">📢</div>
         <div class="data-card-content">
           <div class="data-card-title">Google AdMob (plano gratuito)</div>
           <p class="data-card-desc">Usuários do plano gratuito podem ver anúncios exibidos pelo Google AdMob. O AdMob pode usar identificadores de publicidade do dispositivo (GAID) para exibir anúncios relevantes. Você pode redefinir ou limitar o uso desse identificador nas configurações do Android em <strong>Configurações → Google → Anúncios</strong>. Usuários do plano Premium não veem anúncios.</p>
@@ -584,7 +581,7 @@
       </div>
     </div>
 
-    <p>Os serviços Firebase e AdMob são operados pela Google LLC e estão sujeitos à <a href="https://policies.google.com/privacy" style="color: var(--orange);">Política de Privacidade da Google</a>.</p>
+    <p>Os serviços Firebase e AdMob são operados pela Google LLC e estão sujeitos à <a href="https://policies.google.com/privacy" style="color: var(--orange );">Política de Privacidade da Google</a>.</p>
   </section>
 
   <!-- 6 -->
